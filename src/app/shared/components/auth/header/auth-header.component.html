@@ -1,0 +1,59 @@
+<header class="auth-header">
+  <nav class="auth-header__nav" aria-label="Navegación de autenticación">
+    <ul class="auth-header__list">
+      <li class="auth-header__logo">
+        <span>FMS</span>
+      </li>
+
+      <!-- Mobile -->
+      <li class="auth-header__item auth-header__item--mobile">
+        <a class="auth-header__link auth-header__link--icon auth-header__link--login"
+           routerLink="/auth/login"
+           routerLinkActive="auth-header__link--active"
+           aria-label="Iniciar sesión">
+          <span class="sr-only">Iniciar sesión</span>
+        </a>
+      </li>
+      <li class="auth-header__item auth-header__item--mobile">
+        <a class="auth-header__link auth-header__link--icon auth-header__link--signup"
+           routerLink="/auth/register"
+           routerLinkActive="auth-header__link--active"
+           aria-label="Registrarse">
+          <span class="sr-only">Registrarse</span>
+        </a>
+      </li>
+      <li class="auth-header__item auth-header__item--mobile">
+        <a class="auth-header__link auth-header__link--icon auth-header__link--forgot"
+           routerLink="/auth/forgot"
+           routerLinkActive="auth-header__link--active"
+           aria-label="¿Olvidaste tu contraseña?">
+          <span class="sr-only">¿Olvidaste tu contraseña?</span>
+        </a>
+      </li>
+
+      <!-- Desktop -->
+      <li class="auth-header__item auth-header__item--desk">
+        <a class="auth-header__link"
+           routerLink="/auth/login"
+           routerLinkActive="auth-header__link--active"
+           [routerLinkActiveOptions]="{ exact:true }">
+          Iniciar sesión
+        </a>
+      </li>
+      <li class="auth-header__item auth-header__item--desk">
+        <a class="auth-header__link"
+           routerLink="/auth/register"
+           routerLinkActive="auth-header__link--active">
+          Registrarse
+        </a>
+      </li>
+      <li class="auth-header__item auth-header__item--desk">
+        <a class="auth-header__link"
+           routerLink="/auth/forgot"
+           routerLinkActive="auth-header__link--active">
+          ¿Olvidaste tu contraseña?
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>

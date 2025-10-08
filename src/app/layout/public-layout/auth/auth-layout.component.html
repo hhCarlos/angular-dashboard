@@ -1,11 +1,4 @@
-<header class="auth-header">
-  <div class="brand">🧠 FMS</div>
-  <nav class="auth-nav">
-    <a routerLink="/auth/login" routerLinkActive="active">Iniciar sesión</a>
-    <a routerLink="/auth/register" routerLinkActive="active">Registrarse</a>
-    <a routerLink="/auth/forgot" routerLinkActive="active">¿Olvidaste tu contraseña?</a>
-  </nav>
-</header>
+<app-auth-header />
 
 <main class="auth-main">
   <section class="auth-card">
@@ -14,5 +7,5 @@
 </main>
 
 <footer class="auth-footer">
-  <!-- small>© {{ new Date().getFullYear() }} FMS — Todos los derechos reservados.</small -->
+  <small>© {{ actualDate }} FMS — Todos los derechos reservados.</small>
 </footer>

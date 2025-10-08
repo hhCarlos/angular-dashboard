@@ -78,3 +78,7 @@ Se hace una estructura general para los estilos generales de la aplicacion y con
 se genera la estrategia de mobil primero para dejar las medias queries establecidas.
 
 branch: feat/mobile-first-desing
+
+## Header - Diseño de header y formato de mejoras generales
+
+branch: feat/auth-header-component
