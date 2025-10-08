@@ -71,3 +71,10 @@ Se generan componente necesarios para navegar entre la pagina y generar su layou
 asi como darle estilos y tipos definidos a las respuestas.-
 
 branch: feat/auth-init
+
+## Inicio de diseño para scss con strategia: mobile-first
+
+Se hace una estructura general para los estilos generales de la aplicacion y con ello
+se genera la estrategia de mobil primero para dejar las medias queries establecidas.
+
+branch: feat/mobile-first-desing

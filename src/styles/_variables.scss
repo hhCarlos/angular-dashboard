@@ -1,0 +1,29 @@
+// Palette
+$color-primary: #111;
+$color-secondary: #6366f1;
+$color-bg: #f8f9fa;
+$color-surface: #ffffff;
+$color-border: #e5e5e5;
+$color-error: #e11d48;
+$color-text: #111;
+
+// Typography
+$font-family-base: 'Inter', system-ui, sans-serif;
+
+// Sizing scale
+$radius-sm: 0.4rem;
+$radius-md: 0.8rem;
+$radius-lg: 1.6rem;
+$space-1: 0.4rem;
+$space-2: 0.8rem;
+$space-3: 1.6rem;
+$space-4: 3.2rem;
+
+// Breakpoints (mobile-first)
+$breakpoints: (
+  sm: 480px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1536px
+);

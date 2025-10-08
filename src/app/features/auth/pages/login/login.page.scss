@@ -1,4 +1,33 @@
-h2 { margin-top: 0; margin-bottom: 16px; }
+@use '../../../../../styles/variables' as *;
+@use '../../../../../styles/mixins' as *;
+
+h2 {
+  margin-top: 0; 
+  margin-bottom: 16px;
+  // mobile first
+  font-size: 2rem;
+  color: blue;
+ 
+  @include respond(md) {
+    font-size: 3rem;
+    color: red;
+  }
+
+  @include respond(lg) {
+    font-size: 6rem;
+    color: green;
+  }
+
+  @include respond(xl) {
+    font-size: 7rem;
+    color: orange;
+  }
+
+  @include respond(xxl) {
+    font-size: 7rem;
+    color: purple;
+  }
+}
 form { display: grid; gap: 12px; }
 label { font-size: .9rem; }
 input {
