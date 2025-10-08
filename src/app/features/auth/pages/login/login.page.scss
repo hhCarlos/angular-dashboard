@@ -1,0 +1,12 @@
+h2 { margin-top: 0; margin-bottom: 16px; }
+form { display: grid; gap: 12px; }
+label { font-size: .9rem; }
+input {
+  padding: 10px 12px; border: 1px solid #ddd; border-radius: 10px;
+}
+small { color: #b00020; }
+button {
+  padding: 10px 14px; border-radius: 12px; border: none; cursor: pointer;
+  background: #111; color: #fff;
+}
+.links { display: flex; justify-content: space-between; margin-top: 12px; }

@@ -64,3 +64,10 @@ For more information on using the Angular CLI, including detailed command refere
 Se genero el proyecto:
 
 ng new nombre_proyecto --standalone --routing --style=scss
+
+## Inicio de seccion Auth se genera para login, register, forgot passoword
+
+Se generan componente necesarios para navegar entre la pagina y generar su layout
+asi como darle estilos y tipos definidos a las respuestas.-
+
+branch: feat/auth-init

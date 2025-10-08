@@ -1,0 +1,28 @@
+<h2>Registro</h2>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+  <label>Nombre</label>
+  <input type="text" formControlName="name" placeholder="Tu nombre" />
+
+  <label>Email</label>
+  <input type="email" formControlName="email" placeholder="tu@email.com" />
+
+  <label>Contraseña</label>
+  <input type="password" formControlName="password" placeholder="Mínimo 8 caracteres" />
+
+  <label>Confirmar contraseña</label>
+  <input type="password" formControlName="confirm" placeholder="Repite tu contraseña" />
+
+  <label>Fecha de nacimiento</label>
+  <input type="date" formControlName="birthdate" />
+
+  <button [disabled]="loading || form.invalid" type="submit">
+    {{ loading ? 'Creando…' : 'Crear cuenta' }}
+  </button>
+
+  <p class="error" *ngIf="error">{{ error }}</p>
+</form>
+
+<div class="links">
+  <a routerLink="/auth/login">Ya tengo cuenta</a>
+</div>

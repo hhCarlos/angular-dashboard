@@ -1,0 +1,14 @@
+<h2>Recuperar contraseña</h2>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()" *ngIf="!sent" novalidate>
+  <label>Email</label>
+  <input type="email" formControlName="email" placeholder="tu@email.com" />
+  <button [disabled]="loading || form.invalid" type="submit">
+    {{ loading ? 'Enviando…' : 'Enviar enlace' }}
+  </button>
+</form>
+
+<div *ngIf="sent">
+  <p>Si existe una cuenta con ese correo, te enviamos instrucciones para restablecer tu contraseña.</p>
+  <a routerLink="/auth/login">Volver al inicio de sesión</a>
+</div>

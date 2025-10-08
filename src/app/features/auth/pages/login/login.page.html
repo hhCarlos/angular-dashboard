@@ -1,0 +1,22 @@
+<h2>Inicia sesión</h2>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+  <label>Email</label>
+  <input type="email" formControlName="email" placeholder="tu@email.com" />
+  <small *ngIf="form.controls.email.touched && form.controls.email.invalid">Email inválido</small>
+
+  <label>Contraseña</label>
+  <input type="password" formControlName="password" placeholder="••••••••" />
+  <small *ngIf="form.controls.password.touched && form.controls.password.invalid">
+    Mínimo 6 caracteres
+  </small>
+
+  <button [disabled]="loading || form.invalid" type="submit">
+    {{ loading ? 'Ingresando…' : 'Ingresar' }}
+  </button>
+</form>
+
+<div class="links">
+  <a routerLink="/auth/forgot">¿Olvidaste tu contraseña?</a>
+  <a routerLink="/auth/register">Crear cuenta</a>
+</div>
