@@ -82,3 +82,8 @@ branch: feat/mobile-first-desing
 ## Header - Diseño de header y formato de mejoras generales
 
 branch: feat/auth-header-component
+
+## Header - Diseño de footer y formato de mejoras generales
+
+Date: 8 Oct 2025.
+Branch: feat/auth-footer-component

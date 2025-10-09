@@ -1,0 +1,17 @@
+@use '../../../../../styles/variables' as *;
+@use '../../../../../styles/mixins' as *;
+
+.auth-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.25rem;
+  color: #555;
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
+
+  @include respond(md) {
+    font-size: 1.75rem;
+  }
+}
