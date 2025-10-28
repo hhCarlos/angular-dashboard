@@ -2,14 +2,10 @@ name: Angular Dashboard CI
 
 on:
   push:
-    branches:
-      - develop
-      - ci/workflows
+    branches: [ develop, ci/workflows ]
   pull_request:
-    branches:
-      - develop
-      - ci/workflows
+    branches: [ develop, ci/workflows ]
 
 jobs:
   lint:
-    uses: ./.github/workflows/jobs/lint.yml
+    uses: ./.github/workflows/lint.yml
