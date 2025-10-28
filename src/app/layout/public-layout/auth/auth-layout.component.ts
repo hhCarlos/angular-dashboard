@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { NgIf } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
 import { AuthHeaderComponent } from '../../../shared/components/auth/header/auth-header.component';
 import { AuthFooterComponent } from '../../../shared/components/auth/footer/auth-footer.component';
 
