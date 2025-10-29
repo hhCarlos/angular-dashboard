@@ -7,5 +7,9 @@ on:
     branches: [ develop, ci/workflows ]
 
 jobs:
+  preflow:
+    uses: ./.github/workflows/pre-job.yml
+
   lint:
+    needs: preflow
     uses: ./.github/workflows/lint.yml
