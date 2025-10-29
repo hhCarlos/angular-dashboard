@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "e2e": "start-server-and-test 'npm start' http://localhost:4200 'npm run cy:run'"
   },
   "prettier": {
     "printWidth": 100,
@@ -49,6 +50,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "start-server-and-test": "^2.1.2",
     "typescript": "~5.9.2",
     "typescript-eslint": "8.46.1"
   }
