@@ -20,3 +20,7 @@ jobs:
 
       - name: Run unit testing - Karma - Jasmine
         run: npm run test -- --watch=false --browsers=ChromeHeadless
+      
+      - name: Confirm status
+        run: |
+          echo "✅ Unit Testing completed successfully"
