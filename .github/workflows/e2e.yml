@@ -23,4 +23,8 @@ jobs:
 
       - name: E2E Testing status
         run: |
-          echo "✅ e2e testing completed successfully"
+          echo "✅ E2E Testing completed successfully"
+          du -sh dist/* || true
+          echo "🔹 Build branch: $GITHUB_REF_NAME"
+          echo "🔹 Commit: $GITHUB_SHA"
+          echo "🔹 Actor: $GITHUB_ACTOR"

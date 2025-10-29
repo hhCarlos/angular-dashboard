@@ -24,3 +24,7 @@ jobs:
       - name: Confirm status
         run: |
           echo "✅ Unit Testing completed successfully"
+          du -sh dist/* || true
+          echo "🔹 Build branch: $GITHUB_REF_NAME"
+          echo "🔹 Commit: $GITHUB_SHA"
+          echo "🔹 Actor: $GITHUB_ACTOR"

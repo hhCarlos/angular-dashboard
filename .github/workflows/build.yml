@@ -1,9 +1,9 @@
-name: Lint
+name: Build
 on:
   workflow_call:
 
 jobs:
-  lint:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -18,12 +18,12 @@ jobs:
       - name: Install dependencies   
         run: npm ci
 
-      - name: Run lint
-        run: npm run lint
+      - name: Build project
+        run: npm run build
 
-      - name: Confirm status
+      - name: Show Build info
         run: |
-          echo "✅ Lint completed successfully"
+          echo "✅ Build completed successfully"
           du -sh dist/* || true
           echo "🔹 Build branch: $GITHUB_REF_NAME"
           echo "🔹 Commit: $GITHUB_SHA"

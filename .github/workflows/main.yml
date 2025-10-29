@@ -2,9 +2,13 @@ name: Angular Dashboard CI
 
 on:
   push:
-    branches: [ develop, ci/workflows ]
+    branches:
+      - develop
+      - ci/workflows
   pull_request:
-    branches: [ develop, ci/workflows ]
+    branches:
+      - develop
+      - ci/workflows
 
 jobs:
   preflow:
@@ -21,3 +25,25 @@ jobs:
   e2e-testing:
     needs: unit-testing
     uses: ./.github/workflows/e2e.yml
+
+  build:
+    needs: [lint, unit-testing, e2e-testing]
+    uses: ./.github/workflows/build.yml
+
+  summary:
+    name: Summary
+    needs: [preflow, lint, unit-testing, e2e-testing, build]
+    runs-on: ubuntu-latest
+    if: ${{ success() }}
+    steps:
+      - name: Summary of pipeline
+        run: |
+          echo "🚀 Pipeline completed successfully!"
+          echo "🔹 Repository: $GITHUB_REPOSITORY"
+          echo "🔹 Branch: $GITHUB_REF_NAME"
+          echo "🔹 Commit: $GITHUB_SHA"
+          echo "🔹 Triggered by: $GITHUB_ACTOR"
+          echo "🔹 Workflow: $GITHUB_WORKFLOW"
+          echo "🔹 Event: $GITHUB_EVENT_NAME"
+          echo "---------------------------------------------"
+          echo "✅ All jobs finished successfully — ready to deploy!"
