@@ -17,4 +17,7 @@ jobs:
   unit-testing:
     needs: lint
     uses: ./.github/workflows/unit.yml
-    
+  
+  e2e-testing:
+    needs: unit-testing
+    uses: ./.github/workflows/e2e.yml
