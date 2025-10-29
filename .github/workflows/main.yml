@@ -13,3 +13,8 @@ jobs:
   lint:
     needs: preflow
     uses: ./.github/workflows/lint.yml
+  
+  unit-testing:
+    needs: lint
+    uses: ./.github/workflows/unit.yml
+    
